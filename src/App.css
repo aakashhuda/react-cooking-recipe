@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  padding: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.btn-minus {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.btn.btn-plus {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+.display {
+  padding: 1em;
+  background-color: skyblue;
+}
+
+h1 {
+  text-align: center;
+}
