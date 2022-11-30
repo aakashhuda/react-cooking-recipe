@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Recipe from './Recipe'
+import { recipeContext } from './App'
 
-export default function RecipeList({ recipeList, handleAddRecipe, handleDeleteRecipe }) {
+export default function RecipeList({ recipeList }) {
+    const { handleAddRecipe } = useContext(recipeContext)
     return (
         <>
             <div>
@@ -9,8 +11,7 @@ export default function RecipeList({ recipeList, handleAddRecipe, handleDeleteRe
                     recipeList.map(recipe => {
                         return <Recipe 
                                 key={recipe.id} 
-                                {...recipe}
-                                handleDeleteRecipe={handleDeleteRecipe} 
+                                {...recipe} 
                                 />
                     })
                 }
